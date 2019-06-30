@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.alison.redpackets.dao.UserRedPacketDao">
+    <insert id="grabRedPacket" parameterType="com.alison.redpackets.pojo.UserRedPacket" useGeneratedKeys="true">
+        insert into t_user_red_packet (user_id, red_packet_id, amount, grab_time, note)
+        values (#{userId}, #{redPacketId}, #{amount}, #{grabTime}, #{note})
+    </insert>
+</mapper>
